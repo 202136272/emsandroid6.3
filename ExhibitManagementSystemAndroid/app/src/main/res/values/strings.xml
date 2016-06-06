@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ExhibitManagementSystemAndroid</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
+    <string name="start_level">Level 1</string>
+    <string name="next_level">Next Level</string>
+    <!-- -
+        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main22">Main22Activity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_activity_person">ActivityPerson</string>
+    <string name="title_activity_activity_main_switch">ActivityMainSwitch</string>
+    <string name="button_send">ReadAll</string>
+    <string name="button_save">Save</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_update">Update</string>
+    <string name="title_activity_administrator_service">AdministratorService</string>
+    <string name="button_start_service">Start Admin Manage Service</string>
+    <string name="Start">Start</string>
+    IdNo
+    <string name="IdNo">IdNo</string>
+    <string name="persalNo">PersalNo</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="preview">Preview</string>
+    <string name="submit">Submit</string>
+    <string name="btnHome">Home</string>
+
+</resources>
