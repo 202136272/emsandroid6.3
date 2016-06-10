@@ -7,7 +7,7 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
  */
 public class AdministratorFactory {
 
-    public static Administrator CreateAdministrator(String name, String surname, String persalNumber)
+    public static Administrator getAdministrator(String name, String surname, String persalNumber)
     {
         Administrator myAdmin = new Administrator.Builder()
                 .name(name)

@@ -10,7 +10,7 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
 
 public class BallisticFactory {
 
-    public static Ballistic CreateBallistic(String name, String reference,String type)
+    public static Ballistic getBallistic(String name, String reference,String type)
     {
         Ballistic myBallistic = new Ballistic.Builder()
                 .reference(reference)
@@ -20,4 +20,6 @@ public class BallisticFactory {
         return myBallistic;
 
     }
+
+
 }
