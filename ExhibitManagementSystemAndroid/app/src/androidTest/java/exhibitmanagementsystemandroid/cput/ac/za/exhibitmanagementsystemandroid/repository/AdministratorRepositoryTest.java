@@ -22,7 +22,7 @@ public class AdministratorRepositoryTest extends AndroidTestCase{
 
         AdministratorRepository repo = new AdministratorRepositoryImpl(this.getContext());
         // CREATE
-        Administrator createEntity = AdministratorFactory.CreateAdministrator("Admin", "User", "1");
+        Administrator createEntity = AdministratorFactory.getAdministrator("Admin", "User", "1");
         Administrator insertedEntity = repo.save(createEntity);
 
         id = insertedEntity.getId();

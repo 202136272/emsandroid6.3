@@ -1,4 +1,4 @@
-package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid;
+package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.R;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
 
 public class secondScreen extends AppCompatActivity {

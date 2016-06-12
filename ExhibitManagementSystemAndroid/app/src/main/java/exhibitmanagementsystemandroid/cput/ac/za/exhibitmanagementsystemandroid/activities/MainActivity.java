@@ -1,10 +1,12 @@
-package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid;
+package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.R;
 
 public class MainActivity extends Activity {
 

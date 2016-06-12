@@ -1,35 +1,23 @@
 package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import java.util.Set;
 
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.Impl.AdministratorServiceImpl;
-
-public class AdministratorService extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_administrator_service);
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
 
 
-        Button adminStartService = (Button) findViewById(R.id.button_start_service);
-        adminStartService.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+    public interface AdministratorService {
 
-                Intent msgIntent = new Intent(getApplicationContext(), AdministratorService.class);
-                msgIntent.putExtra(AdministratorServiceImpl.CONNECTIVITY_SERVICE, "");
-                startService(msgIntent);
+        Administrator findById(Long id);
 
-                Toast.makeText(getApplicationContext(), "Service Started\n", Toast.LENGTH_LONG).show();
+        Administrator save(Administrator entity);
+
+        Set<Administrator> findAll();
 
 
-            }
-        });
+         void deleteAll();
+
+        Administrator update(Administrator entity);
+
 
     }
-}
+

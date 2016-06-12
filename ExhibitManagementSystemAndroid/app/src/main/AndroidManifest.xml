@@ -28,7 +28,7 @@
 
         <!-- Include the AdActivity configChanges and theme. -->
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -46,9 +46,9 @@
             android:name=".services.person.Impl.AdministratorServiceImpl"
             android:enabled="true" />
 
-        <activity android:name=".secondScreen" />
-        <activity android:name=".thirdActivity" />
-        <activity android:name=".FourthActivity"></activity>
+        <activity android:name=".activities.secondScreen" />
+        <activity android:name=".activities.thirdActivity" />
+        <activity android:name=".activities.FourthActivity"></activity>
     </application>
 
 </manifest>

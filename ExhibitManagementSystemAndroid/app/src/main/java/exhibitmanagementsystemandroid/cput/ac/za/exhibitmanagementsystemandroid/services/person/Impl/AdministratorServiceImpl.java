@@ -1,36 +1,27 @@
 package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.Impl;
-
-import android.app.IntentService;
-import android.content.Context;
+import android.app.Service;
 import android.content.Intent;
-import android.widget.Toast;
+import android.os.Binder;
+import android.os.IBinder;
 
-import java.io.IOException;
-import java.sql.SQLException;
+import java.util.Set;
 
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.AdministratorService;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.conf.util.App;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.AdministratorRepository;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.Impl.AdministratorRepositoryImpl;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.restapi.AdministratorAPI;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.restapi.Impl.AdministratorAPIImpl;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.AdmistratorServices;
 
 /**
  * Created by Bonga on 5/7/2016.
  */
-public class AdministratorServiceImpl extends IntentService implements AdmistratorServices {
 
 
-    private final AdministratorRepository repo;
+public class AdministratorServiceImpl extends Service implements AdministratorService {
 
+    private final AdministratorRepository administratorRepository;
 
-    private static final String ACTION_ADD = "exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.action.ADD";
-    private static final String ACTION_UPDATE = "exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.action.UPDATE";
-
-    // TODO: Rename parameters
-    private static final String EXTRA_ADD = "exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.extra.ADD";
-    private static final String EXTRA_UPDATE = "exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.extra.UPDATE";
+    private final IBinder localBinder = new AdministratorServiceLocalBinder();
 
     private static AdministratorServiceImpl service = null;
 
@@ -40,59 +31,57 @@ public class AdministratorServiceImpl extends IntentService implements Admistrat
         return service;
     }
 
+    // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
+    // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
+    // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
+    // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
     public AdministratorServiceImpl() {
-        super("AdministratorServiceImpl");
-        repo = new AdministratorRepositoryImpl(App.getAppContext());
+        administratorRepository = new AdministratorRepositoryImpl(App.getAppContext());
     }
 
     @Override
-    public void updateAdmistrator(Context context, Administrator administrator) {
-        Intent intent = new Intent(context, AdministratorRepositoryImpl.class);
-        intent.setAction(ACTION_ADD);
-        intent.putExtra(EXTRA_ADD, administrator);
-        context.startService(intent);
+    public IBinder onBind(Intent intent) {
+        // TODO: Return the communication channel to the service.
+        return localBinder;
     }
 
-    @Override
-    public void createAdministrator(Context context, Administrator administrator) {
-        Intent intent = new Intent(context, AdministratorRepositoryImpl.class);
-        intent.setAction(ACTION_UPDATE);
-        intent.putExtra(EXTRA_UPDATE, administrator);
-        context.startService(intent);
-    }
-
-
-    private void postCustomer(Administrator admin) {
-        Administrator createdAdministrator = repo.update(admin);
-        repo.save(createdAdministrator);
-    }
-
-
-    private void updateCustomer(Administrator admin) {
-        Administrator updatedCustomer = repo.update(admin);
-        repo.save(updatedCustomer);
-    }
-
-
-    @Override
-    protected void onHandleIntent(Intent intent) {
-
-        if (intent != null) {
-            final String action = intent.getAction();
-            if (ACTION_ADD.equals(action)) {
-                final Administrator administrator = (Administrator) intent.getSerializableExtra(EXTRA_ADD);
-                postCustomer(administrator);
-            } else if (ACTION_UPDATE.equals(action)) {
-                final Administrator customers = (Administrator) intent.getSerializableExtra(EXTRA_UPDATE);
-                updateCustomer(customers);
-            }
-
-
+    public class AdministratorServiceLocalBinder extends Binder {
+        public AdministratorServiceImpl getService() {
+            return AdministratorServiceImpl.this;
         }
+    }
 
+    @Override
+    public Administrator findById(Long id) {
+        return administratorRepository.findById(id);
+    }
+
+    @Override
+    public Administrator save(Administrator entity) {
+        return administratorRepository.save(entity);
+    }
+
+    @Override
+    public Set<Administrator> findAll() {
+        return administratorRepository.findAll();
+    }
+
+
+    @Override
+    public void deleteAll()
+    {
+        administratorRepository.deleteAll();
+
+    }
+
+    public Administrator update(Administrator entity)
+    {
+        return administratorRepository.update(entity);
     }
 
 }
+
+
 
 
 

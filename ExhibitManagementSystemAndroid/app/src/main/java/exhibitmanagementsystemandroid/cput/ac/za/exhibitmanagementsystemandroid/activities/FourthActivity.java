@@ -1,4 +1,4 @@
-package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid;
+package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +16,7 @@ import android.widget.TableRow.LayoutParams;
 
 import java.util.Set;
 
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.R;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.AdministratorRepository;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.Impl.AdministratorRepositoryImpl;
