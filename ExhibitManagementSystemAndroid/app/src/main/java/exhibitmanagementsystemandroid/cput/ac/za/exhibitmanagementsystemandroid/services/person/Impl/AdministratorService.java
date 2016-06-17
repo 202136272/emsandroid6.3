@@ -1,4 +1,4 @@
-package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid;
+package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.Impl;
 
 import java.util.Set;
 

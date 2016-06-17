@@ -8,12 +8,11 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.QuestionedDoc;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Docs.Impl.QuestionDocRepositoryImpl;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Docs.QuestionDocRepository;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.Impl.AdministratorRepositoryImpl;
 
 /**
  * Created by Bonga on 5/12/2016.
  */
-public class QuestionDocServicesImpl extends IntentService implements QuestionedDocServices {
+public class QuestionDocServicesImpl extends IntentService implements QuestionedDocService {
 
 
     private final QuestionDocRepository repo;

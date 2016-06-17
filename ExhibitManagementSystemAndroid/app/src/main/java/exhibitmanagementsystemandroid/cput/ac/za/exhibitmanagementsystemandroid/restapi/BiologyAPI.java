@@ -9,6 +9,6 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
  * Created by Bonga on 5/14/2016.
  */
 public interface BiologyAPI {
-    Administrator createBiology( Biology biology) throws IOException;
-    Administrator updateBiology( Biology biology) throws IOException;
+    Biology createBiology( Biology biology) throws IOException;
+    Biology updateBiology( Biology biology) throws IOException;
 }

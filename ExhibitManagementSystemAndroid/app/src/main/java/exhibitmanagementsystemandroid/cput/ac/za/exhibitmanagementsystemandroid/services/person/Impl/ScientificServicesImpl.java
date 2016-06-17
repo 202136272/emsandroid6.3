@@ -12,7 +12,7 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
 /**
  * Created by Bonga on 5/12/2016.
  */
-public class ScientificServicesImpl extends IntentService implements ScientificServices {
+public class ScientificServicesImpl extends IntentService implements ScientificService {
 
 
     private final ScientificRepository repo;

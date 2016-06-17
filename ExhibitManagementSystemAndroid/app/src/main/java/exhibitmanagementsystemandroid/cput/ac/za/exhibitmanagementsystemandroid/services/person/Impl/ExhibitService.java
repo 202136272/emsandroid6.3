@@ -2,6 +2,8 @@ package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid
 
 import android.content.Context;
 
+import java.util.Set;
+
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Exhibit;
 
@@ -9,9 +11,15 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
  * Created by Bonga on 5/12/2016.
  */
 
-public interface ExhibitServices {
+public interface ExhibitService {
+    Exhibit findById(Long id);
 
-    void createExhibit(Context context, Exhibit exhibit);
-    void updateExhibit(Context context, Exhibit exhibit);
+    Exhibit save(Exhibit entity);
 
+    Set<Exhibit> findAll();
+
+
+    void deleteAll();
+
+    Exhibit update(Exhibit entity);
 }

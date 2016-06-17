@@ -38,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AdministratorService"
+            android:name=".services.person.Impl.AdministratorService"
             android:label="@string/title_activity_administrator_service"
             android:theme="@style/AppTheme.NoActionBar" />
 

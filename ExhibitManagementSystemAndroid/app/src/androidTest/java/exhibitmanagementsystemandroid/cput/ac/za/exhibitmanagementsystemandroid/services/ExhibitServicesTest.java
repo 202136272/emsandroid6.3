@@ -11,14 +11,14 @@ import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Exhibit;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Exhibit.ExhibitRepository;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Exhibit.Impl.ExhibitRepositoryImpl;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.Impl.ExhibitServices;
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.Impl.ExhibitService;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.services.person.Impl.ExhibitServicesImpl;
 
 /**
  * Created by Bonga on 5/14/2016.
  */
 public class ExhibitServicesTest extends AndroidTestCase {
-    private ExhibitServices service;
+    private ExhibitService service;
     private ExhibitRepository repo;
     private Exhibit exhibit;
 
@@ -33,7 +33,7 @@ public class ExhibitServicesTest extends AndroidTestCase {
     {
         Long id;
         Intent intent = new Intent(App.getAppContext(),ExhibitRepositoryImpl.class);
-        ExhibitServices myservice = new ExhibitServicesImpl();
+        ExhibitService myservice = new ExhibitServicesImpl();
         Exhibit  exhibit = new Exhibit.Builder()
                 .casNumber("1/1/16")
                 .station("Delft")
