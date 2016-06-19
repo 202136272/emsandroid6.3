@@ -9,24 +9,27 @@ import java.util.Set;
 
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.conf.util.App;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Ballistic;
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.InvestigatingOfficer;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Docs.BallisticRepository;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Docs.Impl.BallisticRepositoryImpl;
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.Impl.InvestigatingOfficerRepositoryImpl;
+import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.InvestigatingOfficerRepository;
 
 /**
  * Created by Bonga on 6/18/2016.
  */
-public class BallisticServiceImpl extends Service implements BallisticService {
+public class InvestigatingOfficerServiceImpl extends Service implements InvestigatingOfficerService {
 
 
-    private final BallisticRepository ballisticRepository;
+    private final InvestigatingOfficerRepository investigatingOfficerRepository;
 
-    private final IBinder localBinder = new BallisticServiceLocalBinder();
+    private final IBinder localBinder = new InvestigatingOfficerServiceLocalBinder();
 
-    private static BallisticServiceImpl service = null;
+    private static InvestigatingOfficerServiceImpl service = null;
 
-    public static BallisticServiceImpl getInstance() {
+    public static InvestigatingOfficerServiceImpl getInstance() {
         if (service == null)
-            service = new BallisticServiceImpl();
+            service = new InvestigatingOfficerServiceImpl();
         return service;
     }
 
@@ -34,8 +37,8 @@ public class BallisticServiceImpl extends Service implements BallisticService {
     // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
     // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
     // WARNING !!! MAKE THIS CONSTRUCTOR PUBLIC FOR TESTING PURPOSE
-    public BallisticServiceImpl() {
-        ballisticRepository = new BallisticRepositoryImpl(App.getAppContext());
+    public InvestigatingOfficerServiceImpl() {
+        investigatingOfficerRepository = new InvestigatingOfficerRepositoryImpl(App.getAppContext());
     }
 
     @Override
@@ -44,38 +47,38 @@ public class BallisticServiceImpl extends Service implements BallisticService {
         return localBinder;
     }
 
-    public class BallisticServiceLocalBinder extends Binder {
-        public BallisticServiceImpl getService() {
-            return BallisticServiceImpl.this;
+    public class InvestigatingOfficerServiceLocalBinder extends Binder {
+        public InvestigatingOfficerServiceImpl getService() {
+            return InvestigatingOfficerServiceImpl.this;
         }
     }
 
     @Override
-    public Ballistic findById(Long id) {
-        return ballisticRepository.findById(id);
+    public InvestigatingOfficer findById(Long id) {
+        return investigatingOfficerRepository.findById(id);
     }
 
     @Override
-    public Ballistic save(Ballistic entity) {
-        return ballisticRepository.save(entity);
+    public InvestigatingOfficer save(InvestigatingOfficer entity) {
+        return investigatingOfficerRepository.save(entity);
     }
 
     @Override
-    public Set<Ballistic> findAll() {
-        return ballisticRepository.findAll();
+    public Set<InvestigatingOfficer> findAll() {
+        return investigatingOfficerRepository.findAll();
     }
 
 
     @Override
     public void deleteAll()
     {
-        ballisticRepository.deleteAll();
+        investigatingOfficerRepository.deleteAll();
 
     }
 
-    public Ballistic update(Ballistic entity)
+    public InvestigatingOfficer update(InvestigatingOfficer entity)
     {
-        return ballisticRepository.update(entity);
+        return investigatingOfficerRepository.update(entity);
     }
 
 }
