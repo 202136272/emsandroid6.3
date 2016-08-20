@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.factory.PersonFactory;
-
 /**
  * Created by Bonga on 2016/03/28.
  */

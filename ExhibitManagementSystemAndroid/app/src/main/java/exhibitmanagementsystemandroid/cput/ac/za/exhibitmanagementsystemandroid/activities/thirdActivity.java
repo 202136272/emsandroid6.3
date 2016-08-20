@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.R;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.AdministratorRepository;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.Impl.AdministratorRepositoryImpl;
 
 public class thirdActivity extends AppCompatActivity {
 
@@ -41,10 +39,10 @@ public class thirdActivity extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                AdministratorRepository repo = new AdministratorRepositoryImpl(getApplicationContext());
+               // AdministratorRepository repo = new AdministratorRepositoryImpl(getApplicationContext());
                 // CREATE
                 //Administrator createEntity = AdministratorFactory.CreateAdministrator(myAdminCatch.getName(),myAdminCatch.getSurname(),myAdminCatch.getPersalNumber());
-                        Administrator insertedEntity = repo.save(myAdminCatch);
+                //        Administrator insertedEntity = repo.save(myAdminCatch);
 
                 //Call the fourth sctivity
                 Intent myIntent = new Intent(view.getContext(), FourthActivity.class);

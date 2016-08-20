@@ -6,12 +6,12 @@ import java.io.Serializable;
  * Created by Bonga on 4/2/2016.
  */
 public class Administrator implements Serializable {
-    private Long id;
+    private long id;
     private  String persalNumber;
     private  String name;
     private String surname;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
@@ -25,6 +25,11 @@ public class Administrator implements Serializable {
         return persalNumber;
     }
 
+    public Administrator()
+    {
+
+    }
+
     public Administrator(Builder builder) {
         id = builder.id;
         name = builder.name;
@@ -32,9 +37,10 @@ public class Administrator implements Serializable {
         persalNumber = builder.persalNumber;
 
     }
+
     public static class Builder {
         //Equivalent to setters
-        private Long id;
+        private long id;
         private String name;
         private String surname;
         private String persalNumber;

@@ -38,12 +38,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".services.person.Impl.AdministratorService"
+            android:name=".services.AdministratorService"
             android:label="@string/title_activity_administrator_service"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service
-            android:name=".services.person.Impl.AdministratorServiceImpl"
+            android:name=".services.ImplorServiceImpl"
             android:enabled="true" />
 
         <activity android:name=".activities.secondScreen" />

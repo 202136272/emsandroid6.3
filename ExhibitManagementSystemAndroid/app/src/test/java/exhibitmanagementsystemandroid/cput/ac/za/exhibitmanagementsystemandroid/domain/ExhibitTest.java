@@ -1,6 +1,5 @@
 package exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain;
 
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.factory.ExhibitFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

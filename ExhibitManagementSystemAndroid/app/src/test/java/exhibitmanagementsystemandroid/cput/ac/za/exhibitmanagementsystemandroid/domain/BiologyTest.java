@@ -4,9 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.factory.BallisticFactory;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.factory.BiologyFactory;
-
 /**
  * Created by Bonga on 4/16/2016.
  */

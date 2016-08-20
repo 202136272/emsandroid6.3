@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.factory.AdministratorFactory;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.factory.BallisticFactory;
 
 /**
  * Created by Bonga on 6/10/2016.

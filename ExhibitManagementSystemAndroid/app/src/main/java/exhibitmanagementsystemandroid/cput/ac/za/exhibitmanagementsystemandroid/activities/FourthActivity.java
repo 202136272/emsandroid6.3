@@ -18,8 +18,6 @@ import java.util.Set;
 
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.R;
 import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.domain.Administrator;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.AdministratorRepository;
-import exhibitmanagementsystemandroid.cput.ac.za.exhibitmanagementsystemandroid.repository.Personel.Impl.AdministratorRepositoryImpl;
 
 /* REFERENCE FOR THIS CODE GO TO :
        http://www.coderzheaven.com/2011/12/26/show-data-in-columns-in-a-tableview-dynamically-in-android/
@@ -45,9 +43,9 @@ public class FourthActivity extends Activity {
             @Override
             public void onClick(View view)
             {
-                AdministratorRepository repo = new AdministratorRepositoryImpl(getApplicationContext());
+             //   AdministratorRepository repo = new AdministratorRepositoryImpl(getApplicationContext());
                 //READ ALL
-                settings = repo.findAll();
+               // settings = repo.findAll();
 
                 Toast.makeText(FourthActivity.this, settings.toString(), Toast.LENGTH_LONG).show();
                 addHeaders();
@@ -131,7 +129,7 @@ public class FourthActivity extends Activity {
 
                 /** Creating a TextView to add to the row **/
                 idTextView = new TextView(this);
-                idTextView.setText(admin.getId().toString());
+                //idTextView.setText(admin.getId().toString());
                 idTextView.setTextColor(Color.RED);
                 idTextView.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
                 idTextView.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
